@@ -1,0 +1,13 @@
+{
+  "id": "o27",
+  "slug": "live-review-to-feishu",
+  "name": "主播复盘入表台",
+  "version": "0.1.0",
+  "repo": "campfire-code/live-review-to-feishu",
+  "license": "MIT",
+  "ui": {
+    "layout": "a",
+    "palette": "rose"
+  },
+  "upstream": null
+}

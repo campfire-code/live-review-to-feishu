@@ -1,0 +1,73 @@
+/* 主播复盘入表台：只用 kit.css 的变量，类名以 lr- 开头 */
+.lr { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.lr-tabs { align-self: flex-start; }
+.lr-tabs button { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; }
+.lr-entry, .lr-settings, .lr-records { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.lr-card { padding: 14px 16px; display: grid; gap: 12px; }
+.lr-card h3 { margin: 0; font-size: 1.05em; }
+.lr-row { display: grid; grid-template-columns: minmax(260px, 1.6fr) minmax(140px, 1fr) minmax(140px, 1fr); gap: 12px; }
+.lr-grow { flex: 1; min-width: 0; }
+.lr-inline { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.lr-inline .k-input { min-width: 0; }
+.lr-num { width: 96px; flex: none; }
+.lr-pad { padding: 0 12px 10px; margin: 0; }
+.lr-ok { color: var(--ok); } .lr-err { color: var(--err); } .lr-warn { color: var(--warn); }
+
+.lr-shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.lr-shots.hover .lr-shot { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+.lr-shot { display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.lr-shot > header { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-bottom: 1px solid var(--line); min-height: 42px; }
+.lr-drop { display: grid; place-items: center; height: 120px; margin: 10px 12px 0; border: 1px dashed var(--line-strong); border-radius: var(--radius); background: var(--chip); color: var(--muted); cursor: pointer; overflow: hidden; padding: 0; }
+.lr-drop:hover { border-color: var(--primary); color: var(--primary); }
+.lr-drop span { display: grid; justify-items: center; gap: 6px; }
+.lr-drop i { font-style: normal; }
+.lr-drop img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.lr-shot-foot { display: flex; align-items: center; gap: 6px; padding: 8px 12px; font-size: .9em; min-width: 0; }
+.lr-shot-foot > span:first-child { flex: 1; min-width: 0; }
+.lr-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 10px; padding: 4px 12px 12px; max-height: 210px; overflow: auto; }
+.lr-m { display: grid; gap: 3px; min-width: 0; }
+.lr-m > span { font-size: .84em; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lr-m.core > span::after { content: " *"; color: var(--primary); }
+.lr-m .k-input { height: 30px; }
+.lr-m.warn .k-input { border-color: var(--warn); background: var(--warn-soft); }
+.lr-m.error .k-input { border-color: var(--err); background: var(--err-soft); }
+
+.lr-qa { padding: 12px 16px; gap: 8px; }
+.lr-qa-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.lr-issues { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.lr-issues li { display: flex; align-items: baseline; gap: 8px; line-height: 1.5; }
+.lr-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+.lr-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lr-search { position: relative; display: flex; align-items: center; width: 260px; }
+.lr-search > svg { position: absolute; left: 10px; pointer-events: none; }
+.lr-search .k-input { padding-left: 30px; }
+.lr-none { text-align: center; padding: 26px; }
+.lr-empty { padding: 28px; text-align: center; display: grid; gap: 4px; }
+
+.lr-mask { position: fixed; inset: 0; background: rgba(0, 0, 0, .45); display: grid; place-items: center; z-index: 50; padding: 16px; }
+.lr-modal { width: min(760px, 100%); max-height: 88vh; display: flex; flex-direction: column; }
+.lr-modal > header, .lr-modal > footer { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+.lr-modal > header { border-bottom: 1px solid var(--line); }
+.lr-modal > footer { border-top: 1px solid var(--line); justify-content: flex-end; }
+.lr-modal > footer > span { margin-right: auto; }
+.lr-modal-body { overflow: auto; padding: 14px; display: grid; gap: 14px; }
+.lr-fans { display: grid; gap: 8px; }
+.lr-fans h4 { margin: 0; }
+.lr-edit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 10px; }
+
+.lr-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.lr-linked { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lr-wlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.lr-wlist li { display: flex; align-items: center; gap: 10px; padding: 4px 0; border-bottom: 1px solid var(--line); }
+.lr-wlist li span { flex: 1; }
+
+.lr-log { padding: 8px 12px; }
+.lr-log > header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.lr-log ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font-size: .92em; }
+.lr-log li { display: flex; gap: 10px; }
+.lr-log time { color: var(--muted); flex: none; }
+.lr-log li.ok { color: var(--ok); } .lr-log li.err { color: var(--err); }
+@media (max-width: 960px) { .lr-shots { grid-template-columns: 1fr; } .lr-row { grid-template-columns: 1fr; } .lr-edit-grid { grid-template-columns: 1fr 1fr; } }
+
+.lr-m.wide { grid-column: span 2; }
